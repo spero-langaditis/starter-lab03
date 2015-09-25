@@ -20,4 +20,11 @@ class Bingo extends Application {
         $this->render();
     }
     
+    function wisdom(){
+         $this->data['pagebody'] = 'justone';
+        $text = $this->quotes->get(6);
+        $this->data = array_merge($this->data, $text);
+        $this->render();
+    }
+    
 }
