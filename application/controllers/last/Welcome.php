@@ -14,6 +14,9 @@
 class Welcome extends Application {
     
     function index() {
+        
+        // loads the template and uses the last method in the quotes
+        // model to retrieve the last quote then merges the data.
         $this->data['pagebody'] = 'justone';
         $text = $this->quotes->last();
         $this->data = array_merge($this->data, $text);

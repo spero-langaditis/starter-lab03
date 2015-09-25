@@ -32,6 +32,8 @@ class Welcome extends Application {
     }
     
     function shucks(){
+        // loads the template and uses the get method in the quotes
+        // model to retrieve the second quote then merges the data.
         $this->data['pagebody'] = 'justone';
         $text = $this->quotes->get(2);
         $this->data = array_merge($this->data, $text);
