@@ -27,4 +27,11 @@ class First extends Application {
         $this->data = array_merge($this->data, $text);
         $this->render();
     }
+    
+    function zzz(){
+        $this->data['pagebody'] = 'justone';
+        $text = $this->quotes->get(1);
+        $this->data = array_merge($this->data, $text);
+        $this->render();    
+    }
 }
