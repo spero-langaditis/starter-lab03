@@ -40,11 +40,27 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
+
+//routes and binds sleep to the zzz function inside the first controller
 $route['sleep'] = 'first/zzz';
+
+//routes lock followed by a wild card ( any char or num ) and binds it
+//to the welcome controller using the shucks funcion
 $route['lock/(.*)'] = 'welcome/shucks';
+
+//routes show followed by any number and binds it
+//to the first controller using the gimme function and passing a variable in 
+//to the function
 $route['show/(:num)'] = 'first/gimme/$1';
+
+// routes and binds dunno to the guess controller
 $route['dunno'] = 'guess';
+
+//routes any character number / bingo to the bingo controller
 $route['(.{4})/bingo'] = 'bingo';
+
+//routes the exact chars comp followed by 4 more characters and binds it
+// to bingo and the function wisdom
 $route['(comp.{4})/(.*)'] = 'bingo/wisdom';
 
 /* End of file routes.php */

@@ -12,7 +12,8 @@
  * @author spero
  */
 class Bingo extends Application {
-    
+    // loads the template and uses the get method in the quotes
+    // model to retrieve the fifth quote then merges the data.
     function index() {
         $this->data['pagebody'] = 'justone';
         $text = $this->quotes->get(5);
@@ -20,6 +21,8 @@ class Bingo extends Application {
         $this->render();
     }
     
+    // loads the template and uses the get method in the quotes
+    // model to retrieve the 6th quote then merges the data.
     function wisdom(){
          $this->data['pagebody'] = 'justone';
         $text = $this->quotes->get(6);

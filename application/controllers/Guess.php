@@ -12,7 +12,8 @@
  * @author spero
  */
 class Guess extends Application { 
-    
+    // loads the template and uses the get method in the quotes
+    // model to retrieve the fourth quote then merges the data.
     function index() {
         $this->data['pagebody'] = 'justone';
         $text = $this->quotes->get(4);
